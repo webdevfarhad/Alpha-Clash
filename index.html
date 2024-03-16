@@ -17,7 +17,8 @@
         
     </header>
     <main class="bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center min-h-screen">
-        <section class="home hidden flex flex-col items-center min-h-screen justify-center gap-10">
+        <!-- !Home Section Starts here! -->
+        <section id="home" class="flex flex-col items-center min-h-screen justify-center gap-10">
             <div>
                 <h1 class="text-[130px] red text-white font-anton uppercase">Alphabet Clash</h1>
             </div>
@@ -25,10 +26,12 @@
                 <p class="text-white text-xl font-bold">Unleash your keyboard kungfu: Press "Enter" to Play</p>
             </div>
             <div>
-                <button class="btn">Play Now</button>
+                <button onclick="play()" id="playnow-btn" class="btn">Play Now</button>
             </div>
         </section>
-        <section class="playground ">
+
+        <!-- !Playground Section Starts here! -->
+        <section id="playground" class="hidden">
             <div class="artboard">
                 <div class="artboard artboard-horizontal phone-6 bg-[#ffffffab] border-8 border-gray-700 rounded-lg mx-auto">
                     <div class="text-center ">
@@ -76,13 +79,13 @@
                   </div>
             </div>
             <div class="flex justify-between px-10">
-                <div class="button-1">
+                <div class="button-1 pl-5">
                     <button class="btn bg-purple-600 text-white rounded-full border-purple-600">
                         Life
                         <img src="./images//Group 23.png" alt=""> <span>1</span>
                     </button>
                 </div>
-                <div class="button-2">
+                <div class="button-2 pr-5">
                     <button class="btn bg-purple-600 text-white rounded-full border-purple-600">
                         Score
                         <img src="./images/monetization_on.png" alt=""> <span>1</span>
@@ -90,12 +93,16 @@
                 </div>
             </div>
         </section>
-        <section class="score"></section>
+
+        <!-- !Score Section Starts here! -->
+        <section class="score">
+
+        </section>
     </main>
     <footer>
 
     </footer>
-
+    <script src="./utility.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
