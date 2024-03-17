@@ -38,12 +38,11 @@
                         <p class="text-white inline-block  bg-gray-700 rounded-b-md px-5 pb-2">Don't watch keyboard while playing!</p>
                     </div>
                     <div class="h-3/4">
-                        <p class="text-9xl h-full my-14 text-black text-center">Y</p> 
+                        <p id="artboard-letter" class="font-poppins text-9xl h-full font-semibold my-14 text-black text-center uppercase">Y</p> 
                     </div>   
-
                 </div>
             </div>
-            <div class="keyboard mt-10">
+            <div id="keyboard" class="mt-10">
                 <div class="flex justify-center gap-1 my-1 w-full">
                     <kbd id="q" class="kbd">q</kbd>
                     <kbd id="w" class="kbd">w</kbd>
@@ -78,15 +77,15 @@
                     <kbd id="/" class="kbd">/</kbd>
                   </div>
             </div>
-            <div class="flex justify-between px-10">
+            <div id="" class="flex justify-between px-10">
                 <div class="button-1 pl-5">
-                    <button class="btn bg-purple-600 text-white rounded-full border-purple-600">
+                    <button id="life-button" class="btn bg-purple-600 text-white rounded-full border-purple-600">
                         Life
                         <img src="./images//Group 23.png" alt=""> <span>5</span>
                     </button>
                 </div>
                 <div class="button-2 pr-5">
-                    <button class="btn bg-purple-600 text-white rounded-full border-purple-600">
+                    <button id="score-button" class="btn bg-purple-600 text-white rounded-full border-purple-600">
                         Score
                         <img src="./images/monetization_on.png" alt=""> <span>0</span>
                     </button>
@@ -95,8 +94,18 @@
         </section>
 
         <!-- !Score Section Starts here! -->
-        <section class="score">
-
+        <section id="score" class="hidden flex h-screen items-center justify-center">
+            <div class="flex flex-col p-5 gap-5 justify-center bg- text-center rounded-lg bg-purple-700">
+                <div id="score">
+                    <h2 class="text-8xl text-white font-extrabold">Score: <span>14</span></h2>
+                </div>
+                <div id="play-again-btn">
+                    <button class="btn px-6 text-xl">Play again</button>
+                </div>
+                <div id="practice-para">
+                    <p class="text-xl text-white ">Practice will make you pro</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
