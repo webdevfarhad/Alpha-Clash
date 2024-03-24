@@ -44,8 +44,6 @@ function removeBgColorById(elementId){
 // Keyboard Event 
 document.addEventListener('keyup', keyboardEventHandler)
 
-
-
 function keyboardEventHandler(event){
     // player pressed
     const keyPressed= event.key;
@@ -65,14 +63,46 @@ function keyboardEventHandler(event){
         continueGame();
 
     }
+    else if(keyPressed === 'Escape'){
+        gameOver();
+    }
     else{   
         const lifeScore= document.getElementById('life-score');
         const updatedLifeScore= parseInt(lifeScore.innerText)-1;
         changeElementValueById('life-score', updatedLifeScore)
-        if(updatedLifeScore<0){
-            hideElementById('playground');
-            showElementById('score')
-            const endScore= document.getElementById('end-score');
+        if(updatedLifeScore<1){
+            gameOver();
         }
     }
 };
+
+function gameOver(){
+    hideElementById('playground');
+    showElementById('score');
+    const playerScore= document.getElementById('player-score');
+    const updatedPlayerScore= parseInt(playerScore.innerText);
+    changeElementValueById('last-score', updatedPlayerScore);
+    const currentKey= document.getElementById('current-letter');
+    const playAgain = document.getElementById('play-again').addEventListener('click',function(){
+        hideElementById('score');
+        showElementById('playground');
+        changeElementValueById('life-score', 5);
+        changeElementValueById('player-score', 0);
+        removeBgColorById(currentKey);
+        continueGame()
+        
+    });
+
+
+    // hideElementById('playground');
+    // showElementById('score');
+    // const endScore= document.getElementById('end-score');
+    // changeElementValueById('end-score', updatedLifeScore)
+    // const playAgain= document.getElementById('play-again')
+    // function play_again(){
+    //     hideElementById('score');
+    //     showElementById('playground');
+    //     removeBgColorById(expectedKey);
+    //     continueGame()
+    // }
+}
