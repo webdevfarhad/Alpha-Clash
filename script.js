@@ -3,5 +3,4 @@ function play(){
     showElementById('playground');
     continueGame()
     
-
 }
